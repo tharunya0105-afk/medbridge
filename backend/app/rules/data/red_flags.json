@@ -1,0 +1,56 @@
+{
+  "_comment": "DEMO DATASET. Not clinically validated. Must be reviewed by a pharmacist or clinician before any real use.",
+  "_todo": "Verify every entry against the cited source before clinical or production use.",
+  "red_flags": [
+    {
+      "rule_id": "R-RED-01",
+      "generic": "digoxin",
+      "symptoms": ["nausea", "vomiting", "visual disturbance", "yellow vision", "slow heartbeat", "irregular heartbeat", "confusion"],
+      "severity": "major",
+      "message_key": "red_flag_digoxin",
+      "action": "Seek urgent care",
+      "source_to_verify": "BNF — digoxin toxicity; Digoxin SmPC warning signs.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "rule_id": "R-RED-02",
+      "generic": "warfarin",
+      "symptoms": ["unusual bruising", "blood in urine", "blood in stool", "prolonged bleeding", "coughing blood", "vomiting blood"],
+      "severity": "major",
+      "message_key": "red_flag_warfarin",
+      "action": "Seek urgent care",
+      "source_to_verify": "BNF — warfarin, bleeding risk; warfarin SmPC.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "rule_id": "R-RED-03",
+      "generic": "lisinopril",
+      "symptoms": ["swelling of face", "swelling of lips", "swelling of tongue", "swelling of throat", "difficulty swallowing", "difficulty breathing"],
+      "severity": "major",
+      "message_key": "red_flag_ace_angioedema",
+      "action": "Seek urgent care",
+      "source_to_verify": "BNF — ACE inhibitor angioedema; lisinopril SmPC.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "rule_id": "R-RED-04",
+      "generic": "metformin",
+      "symptoms": ["severe nausea", "severe vomiting", "stomach pain", "muscle weakness", "difficulty breathing", "feeling very cold", "slow heartbeat"],
+      "severity": "major",
+      "message_key": "red_flag_metformin_lactic_acidosis",
+      "action": "Seek urgent care",
+      "source_to_verify": "BNF — metformin lactic acidosis warning; Metformin SmPC.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "rule_id": "R-RED-05",
+      "generic": "spironolactone",
+      "symptoms": ["muscle weakness", "palpitations", "irregular heartbeat"],
+      "severity": "moderate",
+      "message_key": "red_flag_hyperkalaemia",
+      "action": "Contact your doctor",
+      "source_to_verify": "BNF — spironolactone, hyperkalaemia; spironolactone SmPC.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    }
+  ]
+}

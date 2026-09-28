@@ -1,0 +1,71 @@
+{
+  "_comment": "DEMO DATASET. Not clinically validated. Must be reviewed by a pharmacist or clinician before any real use.",
+  "_todo": "Verify every entry against the cited source before clinical or production use.",
+  "interactions": [
+    {
+      "rule_id": "R-INT-01",
+      "drug_a": "warfarin",
+      "drug_b": "aspirin",
+      "drug_a_class": null,
+      "drug_b_class": null,
+      "severity": "major",
+      "mechanism": "Additive anticoagulant and antiplatelet effects increase bleeding risk.",
+      "message_key": "interaction_major",
+      "action": "Ask your pharmacist",
+      "source_to_verify": "BNF Appendix 1 (Interactions) — warfarin + aspirin; also Stockley's Drug Interactions 12th ed.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "rule_id": "R-INT-02",
+      "drug_a": "lisinopril",
+      "drug_b": "spironolactone",
+      "drug_a_class": "ACE inhibitor",
+      "drug_b_class": "potassium-sparing diuretic",
+      "severity": "major",
+      "mechanism": "Both drugs raise serum potassium. Combined use may cause hyperkalaemia.",
+      "message_key": "interaction_major",
+      "action": "Contact your doctor",
+      "source_to_verify": "BNF Appendix 1 — ACE inhibitors + potassium-sparing diuretics; Stockley's Drug Interactions.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "rule_id": "R-INT-03",
+      "drug_a": "digoxin",
+      "drug_b": "furosemide",
+      "drug_a_class": null,
+      "drug_b_class": "loop diuretic",
+      "severity": "moderate",
+      "mechanism": "Furosemide-induced hypokalaemia may increase digoxin toxicity risk.",
+      "message_key": "interaction_moderate",
+      "action": "Ask your pharmacist",
+      "source_to_verify": "BNF — digoxin + loop diuretics; Stockley's Drug Interactions.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "rule_id": "R-INT-04",
+      "drug_a": "warfarin",
+      "drug_b": "ibuprofen",
+      "drug_a_class": null,
+      "drug_b_class": "NSAID",
+      "severity": "major",
+      "mechanism": "NSAIDs inhibit platelet aggregation and may displace warfarin from plasma proteins, increasing bleeding risk.",
+      "message_key": "interaction_major",
+      "action": "Contact your doctor",
+      "source_to_verify": "BNF Appendix 1 — anticoagulants + NSAIDs; Stockley's Drug Interactions.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "rule_id": "R-INT-05",
+      "drug_a": "metformin",
+      "drug_b": "alcohol",
+      "drug_a_class": null,
+      "drug_b_class": null,
+      "severity": "moderate",
+      "mechanism": "Alcohol increases risk of lactic acidosis with metformin.",
+      "message_key": "interaction_moderate",
+      "action": "Ask your pharmacist",
+      "source_to_verify": "Metformin SmPC (Summary of Product Characteristics); BNF — metformin.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    }
+  ]
+}

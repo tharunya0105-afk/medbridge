@@ -1,0 +1,119 @@
+{
+  "_note": "English UI strings. All safety strings use deterministic templates — no free-form AI.",
+  "app_name": "MedBridge",
+  "tagline": "A safety net between the hospital door and the kitchen table.",
+  "disclaimer": "Not medical advice. This is an unvalidated demo dataset. Confirm all results with your pharmacist or doctor.",
+  "demo_badge": "Demo data",
+  "synthetic_badge": "SYNTHETIC — not real patient data",
+
+  "welcome": {
+    "title": "Welcome to MedBridge",
+    "subtitle": "MedBridge helps you understand your discharge medicines.",
+    "disclaimer_heading": "Important",
+    "disclaimer_body": "MedBridge does not diagnose, prescribe, or change treatment. It is a support tool only. Always confirm your medicines with your pharmacist or doctor.",
+    "consent_label": "I understand this is a support tool, not medical advice.",
+    "start_live": "Photograph my discharge summary",
+    "start_demo": "Try a sample case",
+    "language_label": "Language"
+  },
+
+  "capture": {
+    "title": "Upload or photograph your discharge summary",
+    "upload_btn": "Choose file",
+    "camera_btn": "Use camera",
+    "quality_ok": "Image looks good — processing...",
+    "quality_fail": "Image quality too low. Please retake.",
+    "processing": "Reading your document..."
+  },
+
+  "confirm": {
+    "title": "Check your medicines",
+    "subtitle": "Please check each item. Edit anything that looks wrong.",
+    "amber_label": "Please check this",
+    "field_name": "Medicine name",
+    "field_dose": "Dose",
+    "field_frequency": "How often",
+    "field_duration": "For how long",
+    "confirm_btn": "Confirm",
+    "edit_btn": "Edit",
+    "unsure_btn": "Not sure",
+    "add_row_btn": "Add a medicine",
+    "run_check_btn": "Run safety check",
+    "unsure_note": "Items marked 'not sure' will be sent to 'Ask your pharmacist' — they will not be safety-checked."
+  },
+
+  "safety": {
+    "title": "Safety check results",
+    "no_alerts": "No safety concerns found for the medicines you confirmed.",
+    "what_was_checked": "What was checked",
+    "not_checked": "Not checked (please ask your pharmacist)",
+    "show_why": "Show me why",
+    "rule_id_label": "Rule",
+    "action_label": "What to do",
+    "severity_major": "Important — please act on this",
+    "severity_moderate": "Worth knowing",
+    "severity_info": "Information",
+    "disclaimer_footer": "Not medical advice. This is an unvalidated demo dataset. Confirm with your pharmacist or doctor.",
+    "verified_footer": "Checked by deterministic rules — not by AI."
+  },
+
+  "medicines": {
+    "title": "Your medicines today",
+    "listen_btn": "Listen",
+    "large_text_btn": "Large text",
+    "what_is_it": "What it is for",
+    "how_to_take": "How to take it",
+    "watch_for": "Watch for",
+    "source_note": "Based only on your discharge document."
+  },
+
+  "teachback": {
+    "title": "Check your understanding",
+    "subtitle": "Answer a few questions about your medicines.",
+    "correct_feedback": "Correct!",
+    "wrong_feedback": "Not quite. Here is the right answer:",
+    "score_label": "Your score",
+    "caregiver_prompt": "Your score is below 60%. Would you like to share this summary with a caregiver?",
+    "share_btn": "Share with caregiver",
+    "next_btn": "Next question",
+    "finish_btn": "See my summary"
+  },
+
+  "summary": {
+    "title": "Summary for your pharmacist or nurse",
+    "copy_btn": "Copy",
+    "print_btn": "Print",
+    "meds_heading": "Confirmed medicines",
+    "alerts_heading": "Safety flags",
+    "unsure_heading": "Items needing pharmacist check",
+    "quiz_heading": "Comprehension score",
+    "unvalidated_note": "DEMO DATASET — Not clinically validated. Must be reviewed by a pharmacist."
+  },
+
+  "actions": {
+    "ask_pharmacist": "Ask your pharmacist",
+    "contact_doctor": "Contact your doctor",
+    "seek_urgent_care": "Seek urgent care"
+  },
+
+  "errors": {
+    "no_tesseract": "OCR is not available. Please enter your medicines manually or use Demo mode.",
+    "no_api_key": "Automatic extraction is not available (no API key). Please enter medicines manually or use Demo mode.",
+    "image_too_large": "Image is too large. Please use a photo under 10 MB.",
+    "invalid_file": "This file type is not supported. Please upload a JPEG, PNG, or PDF.",
+    "extraction_failed": "Could not read the document automatically. Please enter your medicines below.",
+    "network_error": "Network error. If you are in demo mode, this should not happen — please reload."
+  },
+
+  "interaction_major": "{drug_a} and {drug_b} should not normally be taken together without your doctor's guidance.",
+  "interaction_moderate": "There is a possible interaction between {drug_a} and {drug_b}.",
+  "duplicate_generic": "You appear to have {generic} listed twice — under {drug_a} and {drug_b}.",
+  "dose_above_limit": "Your total daily dose of {generic} ({total} {unit}) may be above the usual limit ({max} {unit}).",
+  "implausible_frequency": "{name} is written as {frequency} times per day, which is unusual. Please check.",
+  "ocr_low_confidence": "The item '{name}' could not be read clearly (confidence: {confidence}). Please check this line.",
+  "red_flag_digoxin": "While taking {generic}, watch for: {symptoms}. If any appear, {action}.",
+  "red_flag_warfarin": "While taking {generic}, watch for: {symptoms}. If any appear, {action}.",
+  "red_flag_ace_angioedema": "While taking {generic}, watch for: {symptoms}. If any appear, {action}.",
+  "red_flag_metformin_lactic_acidosis": "While taking {generic}, watch for: {symptoms}. If any appear, {action}.",
+  "red_flag_hyperkalaemia": "While taking {generic}, watch for: {symptoms}. If any appear, {action}."
+}

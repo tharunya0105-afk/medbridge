@@ -1,0 +1,257 @@
+{
+  "_note": "Pre-baked extraction results for demo mode. Rules engine still runs live on these.",
+  "case-1": {
+    "_description": "Clean discharge — amlodipine + atorvastatin. No alerts expected.",
+    "meds": [
+      {
+        "id": "med-0",
+        "name_raw": "Amlopres 5mg",
+        "name_generic": "amlodipine",
+        "dose_value": 5.0,
+        "dose_unit": "mg",
+        "frequency_per_day": 1.0,
+        "duration_days": 30,
+        "route": "oral",
+        "instructions": "Take once daily in the morning with or without food.",
+        "confidence": 0.95,
+        "source_span": "Amlopres 5mg",
+        "bbox": {"x": 80, "y": 200, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      },
+      {
+        "id": "med-1",
+        "name_raw": "Atorva 20mg",
+        "name_generic": "atorvastatin",
+        "dose_value": 20.0,
+        "dose_unit": "mg",
+        "frequency_per_day": 1.0,
+        "duration_days": 30,
+        "route": "oral",
+        "instructions": "Take once daily at bedtime.",
+        "confidence": 0.96,
+        "source_span": "Atorva 20mg",
+        "bbox": {"x": 80, "y": 240, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      }
+    ]
+  },
+  "case-2": {
+    "_description": "Duplicate case — Crocin + Dolo (both paracetamol). R-DUP-01 should fire.",
+    "meds": [
+      {
+        "id": "med-0",
+        "name_raw": "Crocin 500mg",
+        "name_generic": "paracetamol",
+        "dose_value": 500.0,
+        "dose_unit": "mg",
+        "frequency_per_day": 2.0,
+        "duration_days": 5,
+        "route": "oral",
+        "instructions": "Take twice daily after food.",
+        "confidence": 0.95,
+        "source_span": "Crocin 500mg",
+        "bbox": {"x": 80, "y": 200, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      },
+      {
+        "id": "med-1",
+        "name_raw": "Dolo 650",
+        "name_generic": "paracetamol",
+        "dose_value": 650.0,
+        "dose_unit": "mg",
+        "frequency_per_day": 2.0,
+        "duration_days": 5,
+        "route": "oral",
+        "instructions": "Take twice daily for fever.",
+        "confidence": 0.93,
+        "source_span": "Dolo 650",
+        "bbox": {"x": 80, "y": 240, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      }
+    ]
+  },
+  "case-3": {
+    "_description": "Interaction case — warfarin + aspirin. R-INT-01 (major) should fire.",
+    "meds": [
+      {
+        "id": "med-0",
+        "name_raw": "Warf 5mg",
+        "name_generic": "warfarin",
+        "dose_value": 5.0,
+        "dose_unit": "mg",
+        "frequency_per_day": 1.0,
+        "duration_days": 30,
+        "route": "oral",
+        "instructions": "Take once daily at the same time each day.",
+        "confidence": 0.95,
+        "source_span": "Warf 5mg",
+        "bbox": {"x": 80, "y": 200, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      },
+      {
+        "id": "med-1",
+        "name_raw": "Ecosprin 75mg",
+        "name_generic": "aspirin",
+        "dose_value": 75.0,
+        "dose_unit": "mg",
+        "frequency_per_day": 1.0,
+        "duration_days": 30,
+        "route": "oral",
+        "instructions": "Take once daily after food.",
+        "confidence": 0.94,
+        "source_span": "Ecosprin 75mg",
+        "bbox": {"x": 80, "y": 240, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      }
+    ]
+  },
+  "case-4": {
+    "_description": "Dose-range case — metformin above typical daily limit. R-DOSE-01 should fire.",
+    "meds": [
+      {
+        "id": "med-0",
+        "name_raw": "Glycomet 1000mg",
+        "name_generic": "metformin",
+        "dose_value": 1000.0,
+        "dose_unit": "mg",
+        "frequency_per_day": 4.0,
+        "duration_days": 30,
+        "route": "oral",
+        "instructions": "Take four times daily with meals.",
+        "confidence": 0.92,
+        "source_span": "Glycomet 1000mg",
+        "bbox": {"x": 80, "y": 200, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      }
+    ]
+  },
+  "case-5": {
+    "_description": "Blurry case — one medicine unreadable. R-OCR-01 should abstain on it.",
+    "meds": [
+      {
+        "id": "med-0",
+        "name_raw": "Amlopres 5mg",
+        "name_generic": "amlodipine",
+        "dose_value": 5.0,
+        "dose_unit": "mg",
+        "frequency_per_day": 1.0,
+        "duration_days": 30,
+        "route": "oral",
+        "instructions": "Take once daily.",
+        "confidence": 0.95,
+        "source_span": "Amlopres 5mg",
+        "bbox": {"x": 80, "y": 200, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      },
+      {
+        "id": "med-1",
+        "name_raw": "??? 250mg",
+        "name_generic": null,
+        "dose_value": null,
+        "dose_unit": null,
+        "frequency_per_day": null,
+        "duration_days": null,
+        "route": null,
+        "instructions": null,
+        "confidence": 0.28,
+        "source_span": "??? 250mg",
+        "bbox": {"x": 80, "y": 240, "width": 300, "height": 30},
+        "flagged_low_confidence": true,
+        "confirmed": false
+      }
+    ]
+  },
+  "case-6": {
+    "_description": "Elderly polypharmacy — digoxin, furosemide, lisinopril, spironolactone, aspirin. Multiple rules fire.",
+    "meds": [
+      {
+        "id": "med-0",
+        "name_raw": "Lanoxin 0.25mg",
+        "name_generic": "digoxin",
+        "dose_value": 0.25,
+        "dose_unit": "mg",
+        "frequency_per_day": 1.0,
+        "duration_days": 90,
+        "route": "oral",
+        "instructions": "Take once daily in the morning.",
+        "confidence": 0.94,
+        "source_span": "Lanoxin 0.25mg",
+        "bbox": {"x": 80, "y": 200, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      },
+      {
+        "id": "med-1",
+        "name_raw": "Lasix 40mg",
+        "name_generic": "furosemide",
+        "dose_value": 40.0,
+        "dose_unit": "mg",
+        "frequency_per_day": 2.0,
+        "duration_days": 30,
+        "route": "oral",
+        "instructions": "Take twice daily.",
+        "confidence": 0.95,
+        "source_span": "Lasix 40mg",
+        "bbox": {"x": 80, "y": 240, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      },
+      {
+        "id": "med-2",
+        "name_raw": "Listril 10mg",
+        "name_generic": "lisinopril",
+        "dose_value": 10.0,
+        "dose_unit": "mg",
+        "frequency_per_day": 1.0,
+        "duration_days": 90,
+        "route": "oral",
+        "instructions": "Take once daily.",
+        "confidence": 0.93,
+        "source_span": "Listril 10mg",
+        "bbox": {"x": 80, "y": 280, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      },
+      {
+        "id": "med-3",
+        "name_raw": "Aldactone 25mg",
+        "name_generic": "spironolactone",
+        "dose_value": 25.0,
+        "dose_unit": "mg",
+        "frequency_per_day": 1.0,
+        "duration_days": 90,
+        "route": "oral",
+        "instructions": "Take once daily with food.",
+        "confidence": 0.96,
+        "source_span": "Aldactone 25mg",
+        "bbox": {"x": 80, "y": 320, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      },
+      {
+        "id": "med-4",
+        "name_raw": "Ecosprin 75mg",
+        "name_generic": "aspirin",
+        "dose_value": 75.0,
+        "dose_unit": "mg",
+        "frequency_per_day": 1.0,
+        "duration_days": 90,
+        "route": "oral",
+        "instructions": "Take once daily after food.",
+        "confidence": 0.95,
+        "source_span": "Ecosprin 75mg",
+        "bbox": {"x": 80, "y": 360, "width": 300, "height": 30},
+        "flagged_low_confidence": false,
+        "confirmed": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "_comment": "DEMO DATASET. Not clinically validated. Must be reviewed by a pharmacist or clinician before any real use.",
+  "_todo": "Verify every entry against the cited source before clinical or production use.",
+  "dose_limits": [
+    {
+      "generic": "paracetamol",
+      "max_single_dose_mg": 1000,
+      "max_daily_dose_mg": 4000,
+      "max_daily_dose_mg_elderly": 2000,
+      "unit": "mg",
+      "note": "Reduce max to 2000 mg/day in patients over 65, those with liver disease, or low body weight (<50 kg).",
+      "source_to_verify": "BNF — paracetamol; UK MHRA guidance on paracetamol dosing.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "generic": "ibuprofen",
+      "max_single_dose_mg": 400,
+      "max_daily_dose_mg": 1200,
+      "max_daily_dose_mg_prescription": 2400,
+      "unit": "mg",
+      "note": "OTC maximum is 1200 mg/day. Prescription doses up to 2400 mg/day under medical supervision.",
+      "source_to_verify": "BNF — ibuprofen; MHRA ibuprofen guidance.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "generic": "metformin",
+      "max_single_dose_mg": 1000,
+      "max_daily_dose_mg": 3000,
+      "unit": "mg",
+      "note": "Typical adult max is 2000-3000 mg/day in divided doses. Start low, titrate up.",
+      "source_to_verify": "BNF — metformin hydrochloride; Metformin SmPC.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "generic": "aspirin",
+      "max_single_dose_mg": 900,
+      "max_daily_dose_mg": 4000,
+      "antiplatelet_dose_mg": 75,
+      "unit": "mg",
+      "note": "Antiplatelet use: 75 mg once daily. Analgesic doses much higher; distinguish intended use.",
+      "source_to_verify": "BNF — aspirin; NICE guidance on antiplatelet therapy.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "generic": "amoxicillin",
+      "max_single_dose_mg": 1000,
+      "max_daily_dose_mg": 3000,
+      "unit": "mg",
+      "note": "Standard adult dose 250-500 mg three times daily. High-dose 3 g/day for certain indications.",
+      "source_to_verify": "BNF — amoxicillin; amoxicillin SmPC.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "generic": "amlodipine",
+      "max_single_dose_mg": 10,
+      "max_daily_dose_mg": 10,
+      "unit": "mg",
+      "note": "Standard starting dose 5 mg once daily; maximum 10 mg once daily.",
+      "source_to_verify": "BNF — amlodipine; amlodipine SmPC.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "generic": "atorvastatin",
+      "max_single_dose_mg": 80,
+      "max_daily_dose_mg": 80,
+      "unit": "mg",
+      "note": "Usual dose 10-80 mg once daily. Maximum 80 mg/day.",
+      "source_to_verify": "BNF — atorvastatin; atorvastatin SmPC.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "generic": "lisinopril",
+      "max_single_dose_mg": 40,
+      "max_daily_dose_mg": 40,
+      "unit": "mg",
+      "note": "For hypertension: usual 10-40 mg once daily. Heart failure: up to 35 mg/day.",
+      "source_to_verify": "BNF — lisinopril; lisinopril SmPC.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "generic": "spironolactone",
+      "max_single_dose_mg": 200,
+      "max_daily_dose_mg": 400,
+      "unit": "mg",
+      "note": "Heart failure: 25-50 mg/day. Higher doses used in primary aldosteronism.",
+      "source_to_verify": "BNF — spironolactone; spironolactone SmPC.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "generic": "furosemide",
+      "max_single_dose_mg": 80,
+      "max_daily_dose_mg": 600,
+      "unit": "mg",
+      "note": "Oedema: 20-80 mg daily. Up to 600 mg/day in resistant cases under close supervision.",
+      "source_to_verify": "BNF — furosemide; furosemide SmPC.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    },
+    {
+      "generic": "digoxin",
+      "max_single_dose_mg": 0.25,
+      "max_daily_dose_mg": 0.25,
+      "unit": "mg",
+      "note": "Maintenance 62.5-250 micrograms/day. Narrow therapeutic index — monitor carefully.",
+      "source_to_verify": "BNF — digoxin; digoxin SmPC.",
+      "_todo_verify": "TODO: verify with pharmacist"
+    }
+  ]
+}
