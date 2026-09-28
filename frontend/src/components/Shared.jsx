@@ -1,16 +1,15 @@
-/**
- * Shared UI components
- */
+import { useNavigate } from 'react-router-dom';
 import { useApp } from '../context';
 import { t } from '../i18n';
 
 export function Header() {
   const { state, dispatch } = useApp();
+  const navigate = useNavigate();
   const lang = state.lang;
 
   return (
     <header className="app-header" id="app-header">
-      <a href="/" className="app-header__logo" onClick={e => { e.preventDefault(); dispatch({ type: 'RESET' }); window.location.href = '/'; }}>
+      <a href="#/" className="app-header__logo" onClick={e => { e.preventDefault(); dispatch({ type: 'RESET' }); navigate('/'); }}>
         <div className="app-header__icon">💊</div>
         <span className="app-header__title">{t(lang, 'app_name')}</span>
       </a>

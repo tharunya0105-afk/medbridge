@@ -79,8 +79,10 @@ export default function SummaryPage() {
       ``,
       `--- SAFETY FLAGS (${alerts.length}) ---`,
       ...alerts.map(
-        (a, i) =>
-          `[${a.severity ? a.severity.toUpperCase() : 'INFO'}] ${a.message} -> Action: ${a.action}`
+        (a, i) => {
+          const msg = a.message || (a.message_key ? t(lang, a.message_key, a.params) : 'Safety concern flagged');
+          return `[${a.severity ? a.severity.toUpperCase() : 'INFO'}] ${msg} -> Action: ${a.action}`;
+        }
       ),
       ``,
       `Note: ${t(lang, 'summary.unvalidated_note')}`,
@@ -360,9 +362,11 @@ export default function SummaryPage() {
                   </div>
                   <ActionBadge action={alert.action} />
                 </div>
-                <p className="text-sm mb-1">{alert.message}</p>
-                {alert.why_explanation && (
-                  <p className="text-xs text-muted mb-0">{alert.why_explanation}</p>
+                <p className="text-sm mb-1">
+                  {alert.message || (alert.message_key ? t(lang, alert.message_key, alert.params) : 'Safety concern flagged')}
+                </p>
+                {(alert.why_detail || alert.why_explanation) && (
+                  <p className="text-xs text-muted mb-0">{alert.why_detail || alert.why_explanation}</p>
                 )}
               </div>
             ))}

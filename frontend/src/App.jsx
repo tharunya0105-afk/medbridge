@@ -1,7 +1,7 @@
 /**
  * MedBridge Application Router & Shell
  */
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from './context';
 import { Header } from './components/Shared';
 
@@ -18,13 +18,14 @@ import SummaryPage from './pages/SummaryPage';
 export default function App() {
   return (
     <AppProvider>
-      <BrowserRouter>
+      <HashRouter>
         <div className="app-layout">
           <Header />
           <main>
             <Routes>
               <Route path="/" element={<WelcomePage />} />
               <Route path="/demo" element={<DemoSelectPage />} />
+              <Route path="/demo-select" element={<DemoSelectPage />} />
               <Route path="/upload" element={<UploadPage />} />
               <Route path="/confirm" element={<ConfirmPage />} />
               <Route path="/safety" element={<SafetyPage />} />
@@ -36,7 +37,7 @@ export default function App() {
             </Routes>
           </main>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </AppProvider>
   );
 }

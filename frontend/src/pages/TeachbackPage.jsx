@@ -136,7 +136,7 @@ export default function TeachbackPage() {
       {/* Current Question Card */}
       <div className="card mb-6 animate-slide-up" key={currentQ.question_id}>
         <h3 className="mb-4" style={{ fontSize: '1.25rem' }}>
-          {currentQ.text}
+          {currentQ.question_text || currentQ.text}
         </h3>
 
         {/* Options */}

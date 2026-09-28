@@ -17,6 +17,10 @@ function AlertItem({ alert, lang }) {
     ? alert.meds_involved.join(' + ')
     : '';
 
+  const messageText = alert.message || (alert.message_key ? t(lang, alert.message_key, alert.params) : 'Safety concern flagged.');
+  const whyText = alert.why_detail || alert.why_explanation;
+  const sourceRef = alert.source_to_verify || alert.source_reference;
+
   return (
     <div className={`alert-card alert-card--${alert.severity || 'info'}`} id={`alert-${alert.rule_id || 'item'}`}>
       <div className="alert-card__header">
@@ -32,7 +36,7 @@ function AlertItem({ alert, lang }) {
       </div>
 
       <div className="alert-card__message">
-        {alert.message}
+        {messageText}
       </div>
 
       <div className="flex items-center justify-between flex-wrap gap-2 mt-3">
@@ -43,7 +47,7 @@ function AlertItem({ alert, lang }) {
           </div>
         )}
 
-        {alert.why_explanation && (
+        {whyText && (
           <button
             type="button"
             className="btn btn--ghost btn--sm"
@@ -55,13 +59,13 @@ function AlertItem({ alert, lang }) {
         )}
       </div>
 
-      {showWhy && alert.why_explanation && (
+      {showWhy && whyText && (
         <div className="alert-card__why animate-fade-in">
           <strong>Why this was flagged:</strong>
-          <p className="mt-1 mb-2">{alert.why_explanation}</p>
-          {alert.source_reference && (
+          <p className="mt-1 mb-2">{whyText}</p>
+          {sourceRef && (
             <div className="alert-card__source">
-              Reference: {alert.source_reference}
+              Reference: {sourceRef}
             </div>
           )}
         </div>

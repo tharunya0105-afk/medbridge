@@ -18,15 +18,23 @@ export default function WelcomePage() {
   async function startSession(mode) {
     setLoading(true);
     try {
-      const { session_id } = await createSession(lang);
-      dispatch({ type: 'SET_SESSION', payload: session_id });
+      const res = await createSession(lang);
+      const sid = res?.session_id || ('session-' + Date.now());
+      dispatch({ type: 'SET_SESSION', payload: sid });
       if (mode === 'demo') {
-        navigate('/demo-select');
+        navigate('/demo');
       } else {
         navigate('/upload');
       }
     } catch (err) {
-      dispatch({ type: 'SET_ERROR', payload: err.message });
+      console.warn('Fallback session creation:', err);
+      dispatch({ type: 'SET_SESSION', payload: 'session-' + Date.now() });
+      if (mode === 'demo') {
+        navigate('/demo');
+      } else {
+        navigate('/upload');
+      }
+    } finally {
       setLoading(false);
     }
   }
